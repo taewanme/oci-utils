@@ -8,14 +8,14 @@ DIR="/home/datascience/.local/share/fonts/NanumFont"
 mkdir -p ~/.local/share/fonts/NanumFont
 unzip ./NamunGothic.zip -d $DIR
 
-echo "Delete Matplotlib's font cache file"
+echo "Delete Matplotlib's font cache file."
 rm -f /home/datascience/.cache/matplotlib/fontlist-v310.json
 echo ""
 echo ""
-echo "====List of installed Nanum Fonts"
+echo "====List of installed Nanum Fonts."
 echo ""
 fc-list|grep Nanum
 echo ""
 echo ""
-echo "====List of Nanum Fonts in Matplotlib"
+echo "====List of Nanum Fonts in Matplotlib."
 python ./check_font.py
