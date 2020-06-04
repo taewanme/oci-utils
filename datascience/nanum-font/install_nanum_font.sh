@@ -9,6 +9,7 @@ rm -f $DIR
 rmdir -f $DIR
 mkdir -p $DIR
 unzip ./NamunGothic.zip -d $DIR
+rm -f ./NamunGothic.zip
 
 echo "Delete Matplotlib's font cache file."
 rm -f /home/datascience/.cache/matplotlib/fontlist-v310.json
@@ -19,8 +20,3 @@ echo ""
 fc-list|grep Nanum
 echo ""
 echo ""
-
-wget https://raw.githubusercontent.com/taewanme/oci-utils/master/datascience/nanum-font/check_font.py -O check.py
-echo "====List of Nanum Fonts in Matplotlib."
-python ./check.py
-rm -f ./check.py
