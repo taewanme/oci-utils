@@ -5,7 +5,9 @@ rm -f ./NamunGothic.zip
 wget https://fonts.google.com/download?family=Nanum%20Gothic  -O NamunGothic.zip
 
 DIR="/home/datascience/.local/share/fonts/NanumFont"
-mkdir -p ~/.local/share/fonts/NanumFont
+rm -f $DIR
+rmdir -f $DIR
+mkdir -p $DIR
 unzip ./NamunGothic.zip -d $DIR
 
 echo "Delete Matplotlib's font cache file."
@@ -17,5 +19,8 @@ echo ""
 fc-list|grep Nanum
 echo ""
 echo ""
+
+wget https://raw.githubusercontent.com/taewanme/oci-utils/master/datascience/nanum-font/check_font.py -O check.py
 echo "====List of Nanum Fonts in Matplotlib."
-python ./check_font.py
+python ./check.py
+rm -f ./check.py
