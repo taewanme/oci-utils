@@ -5,8 +5,7 @@ rm -f ./NamunGothic.zip
 wget https://fonts.google.com/download?family=Nanum%20Gothic  -O NamunGothic.zip
 
 DIR="/home/datascience/.local/share/fonts/NanumFont"
-rm -f $DIR
-rmdir -f $DIR
+rm -rf $DIR
 mkdir -p $DIR
 unzip ./NamunGothic.zip -d $DIR
 rm -f ./NamunGothic.zip
